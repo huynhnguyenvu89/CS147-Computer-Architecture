@@ -62,7 +62,7 @@ begin
 	`ALU_OPRN_WIDTH'h06 : result = op1 & op2; // and
 	`ALU_OPRN_WIDTH'h07 : result = op1 | op2; // or
 	`ALU_OPRN_WIDTH'h08 : result = ~(op1 | op2); // not
-	`ALU_OPRN_WIDTH'h09 : result = (op1 < op2)? `ALU_OPRN_INDEX_LIMIT'b1 : `ALU_OPRN_INDEX_LIMIT'b0; // set less than
+	`ALU_OPRN_WIDTH'h09 : result = (op1 < op2)? `DATA_INDEX_LIMIT'b1 : `DATA_INDEX_LIMIT'b0; // set less than
  
         default: result = `DATA_WIDTH'hxxxxxxxx;
                  
